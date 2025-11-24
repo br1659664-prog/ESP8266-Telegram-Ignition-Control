@@ -1,0 +1,34 @@
+(5V Supply)
+            │
+            │
+        ┌───┴─────┐
+        │ Relay   │
+        │ Module  │
+        │ (IN,VCC,GND,NO,COM)     
+        └───┬─────┘
+            │
+            │ IN (Control Signal)
+            │
+         ┌──┴───────┐
+         │ ESP8266  │
+         │ (NodeMCU)│
+         │          │
+    5V ──┤ VIN      │
+   GND ──┤ GND      │────── Common Ground
+ D5/GPIO14 ─────────┘ (Signal -> Relay IN)
+
+
+Ignition Output Side:
+
+      Power Source (+)
+             │
+             │
+         ┌───┴─────┐
+         │  Relay  │
+         │  NO     │──────▶ Ignition Device (+ Input)
+         │  COM    │──────▶ Power Source (+)
+         └─────────┘
+
+Ignition Device (Coil, Spark, Igniter)
+     │
+    GND  ───────────────▶ Power Source Ground
